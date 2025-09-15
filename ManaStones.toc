@@ -1,7 +1,8 @@
 ## Interface: 11000
-## Version: 0.45
-## Title: ManaStones 0.45
+## Version: 1
+## Title: ManaStones
 ## Notes: Make ONE button to create all mana stones for mages.
-## Author: Dead_LAN - Diavolos
+## Author: Monomoy
 ## SavedVariablesPerCharacter: MSleft, MStop, MSlocked, MStooltip
 ManaStones.xml
+
