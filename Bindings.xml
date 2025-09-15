@@ -1,0 +1,8 @@
+<Bindings>
+  <Binding name="MSCONJ" description="MSCONJ" header="MANASTONES">
+    ManaStones_conjure();
+  </Binding>
+  <Binding name="MSUSE" description="MSUSE">
+    ManaStones_use();
+  </Binding>
+</Bindings>

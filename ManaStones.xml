@@ -1,0 +1,55 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="ManaStones.lua"/>
+	<Script file="ManaStones_Localization.lua"/>
+	<GameTooltip name="ManaStonesTooltip" inherits="GameTooltipTemplate" parent="UIParent"></GameTooltip>
+	  <Frame name="ManaStonesFrame" hidden="true">
+	    <Scripts>
+	      <OnLoad>
+	        ManaStones_OnLoad();
+	      </OnLoad>
+	    </Scripts>
+	  </Frame>
+
+          <Button name="ManaStonesTemp" frameStrata="DIALOG" movable="true" enableMouse="true" parent="UIParent" hidden="false">
+           <NormalTexture file="Interface\Icons\INV_Misc_Gem_Emerald_01"/> 
+           <Size><AbsDimension x="36" y="36"/></Size>
+             <Anchors>
+	     <Anchor point="CENTER">
+	     </Anchor>
+             </Anchors>
+             <Scripts>
+		<OnLoad>
+                        --ManaStones_Init();
+         		this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+                        this:RegisterForDrag("LeftButton");
+		</OnLoad>
+                <OnClick>
+	        	if ( arg1 == "LeftButton" ) then
+			    ManaStones_conjure();
+		        else
+			    ManaStones_use();
+			end
+                </OnClick>
+                <OnDragStart>
+                   ManaStonesCheckLock1();
+                </OnDragStart>
+                <OnDragStop>
+                   ManaStonesCheckLock2();
+                </OnDragStop>
+                <OnMouseUp>
+                   ManaStonesCheckLock2();
+                   ManaStonesSavePosition();
+                </OnMouseUp>
+                <OnEnter>
+                   ManaStonesTooltipCheck();
+                </OnEnter>
+                <OnLeave>
+                   ManaStonesTooltip:Hide();
+                </OnLeave>
+             </Scripts>
+            </Button>
+
+
+</Ui>
+
