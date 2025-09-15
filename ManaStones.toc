@@ -1,8 +1,9 @@
 ## Interface: 11000
 ## Version: 1
-## Title: ManaStones
+## Title: |cff7fff7f TurtleWOW|r ManaStones
 ## Notes: Make ONE button to create all mana stones for mages.
 ## Author: Monomoy
 ## SavedVariablesPerCharacter: MSleft, MStop, MSlocked, MStooltip
 ManaStones.xml
+
 
